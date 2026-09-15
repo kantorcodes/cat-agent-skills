@@ -78,7 +78,7 @@ hol-guard approvals approve <request-id>
 hol-guard approvals deny <request-id>
 ```
 
-Only approve after reading the risk reason and understanding the requested scope.
+Before running either decision command, require the user to explicitly choose `approve` or `deny` for that exact request ID. Reading the risk reason or understanding the requested scope is not authorization.
 
 ## Capture evidence
 
