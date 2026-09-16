@@ -37,13 +37,17 @@ If `pipx` is unavailable, explain that an isolated CLI install is recommended in
 
 ## Protect a local harness
 
+Configure and verify protection without launching the harness:
+
 ```bash
 hol-guard bootstrap
 hol-guard install <harness>
 hol-guard run <harness> --dry-run
-hol-guard run <harness>
 hol-guard status
+hol-guard doctor <harness> --json
 ```
+
+Only run `hol-guard run <harness>` when the user explicitly asks to launch that harness or explicitly confirms the launch. Installing or configuring protection does not authorize starting an agent session.
 
 Supported harness targets include `codex`, `claude-code`, `copilot`, `cursor`, `gemini`, `hermes`, `openclaw`, `opencode`, and `antigravity`.
 
